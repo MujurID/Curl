@@ -17,5 +17,6 @@ $headers[] = "Cookie: __cfduid=d539cbb77af2174bc4c6e56fe0cdb30711541063620; __sm
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $result = curl_exec($ch);
+echo "OK!";
 curl_close ($ch);
 }
