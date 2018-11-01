@@ -1,6 +1,6 @@
 <?php
+for( $i = 0; $i<5; $i++ ) {
 while(1){
-for( $i = 0; $i<10; $i++ ) {
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://geevv.com/search?q=MujurID&type=web");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
