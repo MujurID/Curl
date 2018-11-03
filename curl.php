@@ -14,10 +14,8 @@ $headers[] = "Referer: https://geevv.com/search?q=MujurID&type=web";
 $headers[] = "Upgrade-Insecure-Requests: 1";
 $headers[] = "User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36";
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-for( $i = 0; $i<5; $i++ ) {
 $result = curl_exec($ch);
 $rand = rand(0,9);
 echo "OK!$rand";
 curl_close ($ch);
-}
 }
