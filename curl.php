@@ -5,14 +5,16 @@ curl_setopt($ch, CURLOPT_URL, "https://geevv.com/search?q=MujurID&type=web");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HEADER, 1);
 $headers = array(
-"Host: geevv.com:443",
-"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-"Accept-Encoding: gzip, deflate, br",
-"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-"Cookie: __cfduid=db24e5b6adcefa7f686db45ce054660fb1541067313; dashboard-popup=1; _ga=GA1.2.1007016024.1541212064; __smVID=33a95f6239ec47feb6499da6c4db6a562c14d03c7f033bc663e1f1d693d813a1; _gid=GA1.2.868833967.1541499499; _gat=1; _fbp=fb.1.1541507728101.503760437; __smToken=A3HDRrIiAyKc0G6meEUulS3F; remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IksxZkk0TG51TEVGSnJZbDVNd2treVE9PSIsInZhbHVlIjoiMUJuTE0xMTBsdkwxeHNOV2FwVVpHZ2xcLytOVHY1aTBpZEExQzdhZTBvanVqSHVucGdWS2I2U011RjlPZjhsSW5vclZ6b1pHTndmS0tKZDgra3pVdU9TMHJJTDNreUc1WUxRbHplUVIzMTZrPSIsIm1hYyI6ImZhMmEzN2NlNGIxZWU0NTdlOTg0OWEzYzYzYmY1ZTBmZmY4Y2JmMTI4OTc5NmQ1YjUwOGVhNzRiZDFkODBkOTIifQ%3D%3D; laravel_session=262a809c607d420ea32c349ec6e57bb5c1bc7146; XSRF-TOKEN=eyJpdiI6InR3OGcyWkhjWTdJbUluV3NoamlXNWc9PSIsInZhbHVlIjoiNHpPRGthNFVpOFh2eVoyeTc0MzYwWG1ZZmZBWVlHbUNcL3dYUHRKSFZIQUxKZDBiaXp2NkJhWU9weGRud0lseDg1a2pnNHRtR1NGTEtycWhLZFFWelFBPT0iLCJtYWMiOiJjMDEwNmE3MGEwMmQzNWM1NjFlYmY3OTk1ZGU3NzlhMmU3NmExYjNjMTM1MDgyZjhlNTNlODU2YzBlNGNjZjQ4In0%3D",
-"Referer: https://geevv.com/search?q=MujurID&type=web",
-"Upgrade-Insecure-Requests: 1",
-"User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
+"Host: geevv.com",
+"Connection: keep-alive",
+"Upgrade-Insecure-Requests: 1",
+"Save-Data: on",
+"User-Agent: Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36",
+"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+"Referer: https://geevv.com/search?q=MujurID&type=web",
+"Accept-Encoding: gzip, deflate, br",
+"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+"Cookie: __cfduid=d539cbb77af2174bc4c6e56fe0cdb30711541063620; __smVID=c9e0b994b5228a295dd8b62623a5b516d7bbd6626f6c955483526c1630d807d3; _ga=GA1.2.749746428.1541063625; dashboard-popup=1; _gid=GA1.2.869184855.1541500878; _fbp=fb.1.1541500879288.2116556437; remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6Im9Nb3E2bHYxU2oxMzQ3YzBnUUh0RVE9PSIsInZhbHVlIjoiMVMwOXRnUVh0XC8rYVJwM3hoTDlvck1MY3BVRFIzZlhqak5ZVWxYOGdSamhHamRXS0JDeTYyVXphM1NOYkZsV3dtZGJlaThOSDNLc0VpUGtlS1RaRUtZSWpBZjladEpGOUU5TTdpUHZjb2FFPSIsIm1hYyI6ImQwODZjMDkyOTI5NDBkYzQwMDUxMDcyYjA3MDc1NmI4NzcyMmQ2MjJhYTMwYzZmNGZlMTc5ZGE2MTE0ZGU0MDEifQ%3D%3D; laravel_session=a3b46d4a3e0ad1195f8287602394059f57c01465; __smToken=9Z2H6CYW0F4g36RBOg1OsbOI; XSRF-TOKEN=eyJpdiI6InFkaFl2a21qTDIyVnQ4ZmN1WWZ3cEE9PSIsInZhbHVlIjoiNjdoTHBJSDlGXC9xVWFtQmhLV0R1YXhIYjd4XC8xNmh0aWU1WnkzXC84eFpFXC9jVG9rSXBlVGx2Q0FFbnk3S0hPY0FxQUJocEFYY3grdmFLMDdIcnErUnhnPT0iLCJtYWMiOiI2NTBhMTc1MGViYjI1NDRmNzY3ZjIyYzJkNzZlYzg3YzdkZDE1YzU5YjNjYWI5YmRlNDc3YWEyOWEyNDc0YTdmIn0%3D"
 );
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 $result = curl_exec($ch);
